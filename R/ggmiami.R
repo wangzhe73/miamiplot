@@ -118,7 +118,8 @@ ggmiami <- function(
   upper_highlight_color = "green",
   lower_highlight = NULL,
   lower_highlight_col = NULL,
-  lower_highlight_color = "green") {
+  lower_highlight_color = "green",
+point_size=NULL,label_size=NULL) {
 
   # Prepare the data
   plot_data <- prep_miami_data(data = data, split_by = split_by,
@@ -166,7 +167,7 @@ ggmiami <- function(
   upper_plot <- ggplot2::ggplot() +
     ggplot2::geom_point(data = plot_data$upper,
                         aes(x = .data$rel_pos, y = .data$logged_p,
-                            color = as.factor(.data$chr)), size = 0.25) +
+                            color = as.factor(.data$chr)), size = point_size) +
     ggplot2::scale_x_continuous(labels = plot_data$axis$chr,
                                 breaks = plot_data$axis$chr_center,
                                 expand = ggplot2::expansion(mult = 0.01),
@@ -185,7 +186,7 @@ ggmiami <- function(
   lower_plot <- ggplot2::ggplot() +
     ggplot2::geom_point(data = plot_data$lower,
                         aes(x = .data$rel_pos, y = .data$logged_p,
-                            color = as.factor(.data$chr)), size = 0.25) +
+                            color = as.factor(.data$chr)), size = point_size) +
     ggplot2::scale_x_continuous(breaks = plot_data$axis$chr_center,
                                 position = "top",
                                 expand = ggplot2::expansion(mult = 0.01)) +
@@ -314,7 +315,7 @@ ggmiami <- function(
                                 aes(x = .data$rel_pos,
                                     y = .data$logged_p,
                                     label = .data$label),
-                                size = 2, segment.size = 0.2,
+                                size = label_size, segment.size = 0.2,
                                 min.segment.length = 0, force = 2,
                                 box.padding = 0.5)
 
@@ -323,7 +324,7 @@ ggmiami <- function(
                                 aes(x = .data$rel_pos,
                                     y = .data$logged_p,
                                     label = .data$label),
-                                size = 2, segment.size = 0.2,
+                                size = label_size, segment.size = 0.2,
                                 min.segment.length = 0, force = 2,
                                 box.padding = 0.5)
   }
@@ -340,7 +341,7 @@ ggmiami <- function(
                                   aes(x = .data$rel_pos,
                                       y = .data$logged_p,
                                       label = .data$label),
-                                  size = 2, segment.size = 0.2,
+                                  size = label_size, segment.size = 0.2,
                                   min.segment.length = 0, force = 2,
                                   box.padding = 0.5)
   }
@@ -357,7 +358,7 @@ ggmiami <- function(
                                   aes(x = .data$rel_pos,
                                       y = .data$logged_p,
                                       label = .data$label),
-                                  size = 2, segment.size = 0.2,
+                                  size = label_size, segment.size = 0.2,
                                   min.segment.length = 0, force = 2,
                                   box.padding = 0.5)
   }
