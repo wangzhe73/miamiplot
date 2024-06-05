@@ -315,7 +315,6 @@ ggmiami <- function(
                                     y = .data$logged_p,
                                     label = .data$label),
                                 size = 2, segment.size = 0.2,
-                                point.padding = 0.3,
                                 min.segment.length = 0, force = 2,
                                 box.padding = 0.5)
 
@@ -325,7 +324,6 @@ ggmiami <- function(
                                     y = .data$logged_p,
                                     label = .data$label),
                                 size = 2, segment.size = 0.2,
-                                point.padding = 0.3,
                                 min.segment.length = 0, force = 2,
                                 box.padding = 0.5)
   }
@@ -343,7 +341,6 @@ ggmiami <- function(
                                       y = .data$logged_p,
                                       label = .data$label),
                                   size = 2, segment.size = 0.2,
-                                  point.padding = 0.3,
                                   min.segment.length = 0, force = 2,
                                   box.padding = 0.5)
   }
@@ -361,7 +358,6 @@ ggmiami <- function(
                                       y = .data$logged_p,
                                       label = .data$label),
                                   size = 2, segment.size = 0.2,
-                                  point.padding = 0.3,
                                   min.segment.length = 0, force = 2,
                                   box.padding = 0.5)
   }
